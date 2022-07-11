@@ -1,0 +1,29 @@
+{
+  "name": "steam-tools",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "tauri": "tauri"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^1.0.2",
+    "pinia": "^2.0.14",
+    "vue": "^3.2.37"
+  },
+  "devDependencies": {
+    "@popperjs/core": "^2.11.5",
+    "@tauri-apps/cli": "^1.0.3",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "pug": "^3.0.2",
+    "sass": "^1.53.0",
+    "typescript": "^4.7.4",
+    "vite": "^2.9.14",
+    "vite-plugin-vue-pug-with-css-modules": "^1.0.1",
+    "vue-router": "^4.1.1",
+    "vue-tsc": "^0.29.8",
+    "vuex": "^4.0.2"
+  }
+}

@@ -1,0 +1,27 @@
+[package]
+name = "main"
+version = "0.1.0"
+description = "A Tauri App"
+authors = ["you"]
+license = ""
+repository = ""
+default-run = "main"
+edition = "2018"
+build = "src/build.rs"
+
+[build-dependencies]
+tauri-build = { version = "1.0.0-beta.4", features = [] }
+
+[dependencies]
+macro_tool = { path = "macro_tool" }
+async-std = "1.10.0"
+winreg = "0.10.1"
+sysinfo = "0.23.0"
+serde_json = "1.0"
+keyvalues-parser = "0.1.0"
+serde = { version = "1.0", features = ["derive"] }
+tauri = { version = "1.0.0-beta.8", features = ["api-all"] }
+
+[features]
+default = [ "custom-protocol" ]
+custom-protocol = [ "tauri/custom-protocol" ]

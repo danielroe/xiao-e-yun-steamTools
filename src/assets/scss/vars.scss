@@ -1,0 +1,66 @@
+@use "sass:math";
+@use "color";
+
+//色卡
+$focus: #42b983;
+$main: #f1dac4;
+$side-1: #a69cac;
+$side-2: #474973;
+$side-3: #161b33;
+$bg: #0d0c1d;
+$white: #f2f2f2;
+$black: #262626;
+
+$focus-trn: #42b98366;
+$main-trn: #f1dbc5cc;
+$side-1-trn: #a69cac66;
+$side-2-trn: #47497366;
+$side-3-trn: #161b3366;
+$bg-trn: #0d0c1d66;
+$white-trn: #f2f2f266;
+$black-trn: #26262666;
+//其他
+$border_width: 2px;
+$border: $main solid 2px;
+$no_color: Transparent;
+
+@mixin shadow($level: 1, $transition: false) {
+  $offset: $level * 6px;
+  $size: math.div($offset, 2);
+  box-shadow: $offset $offset $size color.side-2(.6);
+  @if $transition {
+    transition: box-shadow .3s ease-in-out;
+  }
+}
+
+//嵌入媒體
+@mixin pe {
+  @media (max-width: 720px) {
+    @content;
+  }
+}
+@mixin pc {
+  @media (min-width: 2001px) {
+    @content;
+  }
+}
+
+//動畫
+@keyframes fade_in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes pop_in {
+  from {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
